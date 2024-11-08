@@ -77,7 +77,7 @@ echo "Starting installation of realsense-ros"
 cd $INSTALLDIR
 
 # Update the dependencies database
-rosdep update
+rosdepc update
 echo "Cloning Intel ROS realsense package"
 # Prerequisite: ddynamic_reconfigure
 git clone https://github.com/pal-robotics/ddynamic_reconfigure
@@ -89,7 +89,7 @@ patch -p1 < $INSTALL_DIR/patches/package.diff
 cd ../..
 echo $PWD
 echo "Making Intel ROS realsense-ros"
-sudo rosdep -y install --from-paths src --ignore-src --rosdistro melodic
+sudo rosdepc -y install --from-paths src --ignore-src --rosdistro melodic
 if [ -e "$CATKIN_WORKSPACEHIDDEN" ] ; then
         echo "catkin_make starts"
 	catkin_make
