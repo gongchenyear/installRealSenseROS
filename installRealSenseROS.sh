@@ -77,6 +77,7 @@ echo "Starting installation of realsense-ros"
 cd $INSTALLDIR
 
 # Update the dependencies database
+sudo pip3 install rosdepc
 rosdepc update
 echo "Cloning Intel ROS realsense package"
 # Prerequisite: ddynamic_reconfigure
