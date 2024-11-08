@@ -77,6 +77,7 @@ echo "Starting installation of realsense-ros"
 cd $INSTALLDIR
 
 # Update the dependencies database
+export LC_ALL='en_US.utf8'
 sudo pip3 install rosdepc
 rosdepc update
 echo "Cloning Intel ROS realsense package"
