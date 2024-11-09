@@ -78,7 +78,7 @@ cd $INSTALLDIR
 
 # Update the dependencies database
 sudo apt-get -y install python-rosdep
-rosdep init
+sudo rosdep init
 rosdep update
 echo "Cloning Intel ROS realsense package"
 # Prerequisite: ddynamic_reconfigure
