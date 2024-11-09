@@ -77,9 +77,10 @@ echo "Starting installation of realsense-ros"
 cd $INSTALLDIR
 
 # Update the dependencies database
-sudo apt-get -y install python-rosdep
-sudo rosdep init
-rosdep update
+export LC_ALL='en_US.utf8'
+sudo pip3 install rosdepc
+sudo rosdepc init
+rosdepc update
 echo "Cloning Intel ROS realsense package"
 # Prerequisite: ddynamic_reconfigure
 git clone https://github.com/pal-robotics/ddynamic_reconfigure
