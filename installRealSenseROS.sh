@@ -77,7 +77,7 @@ echo "Starting installation of realsense-ros"
 cd $INSTALLDIR
 
 # Update the dependencies database
-sudo apt install rosdep -y
+sudo apt-get -y install python-rosdep
 rosdep init
 rosdep update
 echo "Cloning Intel ROS realsense package"
